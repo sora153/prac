@@ -1,0 +1,22 @@
+@model Prac.Models.Calculadora
+
+
+<div class="text-center">
+    <h1 class="display-4">Calculadora</h1>
+    <form asp-controller="Calculadora" asp-action="Calcular">
+        <h1>numero de tarjeta</h1><input asp-for="Operador1" class="form-control" />
+        
+        <h1>fecha de vencimiento</h1><input asp-for="Operador2" class="form-control" />
+        
+        <h1>monto a pagar</h1><input asp-for="Operador3" class="form-control" />
+        
+
+        <select asp-for="Operando" class="form-control" >
+            
+            <option value="+">monto total a pagar</option>
+            
+        </select>
+        <button type="submit" class="btn btn-primary">Calcular</button> 
+    </form>
+    <h1>@ViewData["Message"]</h1>
+</div>
